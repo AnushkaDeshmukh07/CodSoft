@@ -1,0 +1,82 @@
+#include<iostream>
+using namespace std;
+class calculator
+{
+    public:
+    double a,b,x;
+    double getdata()
+    {
+     cout<<"enter the first number"<<endl;
+        cin>>a;
+
+        cout<<"enter the second number"<<endl;
+        cin>>b;
+        return 0;
+    }
+    double add()
+    {
+            cout<<"Addition is:"<<a+b<<endl;
+        return 0;
+    }
+    
+    double sub()
+    {
+            cout<<"Subtraction is:"<<a-b<<endl;
+        return 0;
+    }
+    double mul()
+    {
+            cout<<"Multiplication is:"<<a*b<<endl;
+        return 0;
+    }
+    double div()
+    {
+        if(b==0)
+        {
+            cout<<"cannot divide by zero"<<endl;
+        }
+        else
+            cout<<"Division is:"<<a/b<<endl;
+        return 0;
+    }
+    
+};
+int main()
+{
+    calculator c;
+    int choice;
+    do
+    {
+        cout<<"1.getdata"<<endl;
+        cout<<"2.ADDITION(+)"<<endl;
+        cout<<"3.SUBTRACTION(-)"<<endl;
+        cout<<"4.MULTIPLICATION(*)"<<endl;
+        cout<<"5.DIVISION(/)"<<endl;
+        cout<<"6.QUIT"<<endl;
+        cout<<"Enter your choice:"<<endl;
+        cin>>choice;
+        switch(choice)
+        {
+            case 1:
+            c.getdata();
+            break;
+            case 2:
+            c.add();
+            break;
+            case 3:
+            c.sub();
+            break;
+            case 4:
+            c.mul();
+            break;
+            case 5:
+            c.div();
+            break;
+            case 6:
+            break;
+            default:
+            cout<<"wrong choice"<<endl;
+        }
+        }while(choice!=6);
+        return 0;
+    }
